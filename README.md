@@ -20,8 +20,13 @@ go get github.com/microservice_item
 
 3. run
 ```
+protoc -I. --go_out=plugins=grpc:. proto/item.proto
 go run main.go
 ```
+
+note:
+    git convert crlf to lf, don't know why
+    then protobuf convert lf to crlf again
 
 # LICENSE
 
