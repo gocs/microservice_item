@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package iime;
+
+// Interface exported by the server.
+service ItemService {
+    rpc CreateItem(Item) returns (Response) {}
+}
+
+message Item {
+    repeated string tags = 1;
+    string name = 2;
+    string description = 3;
+    string reciept = 4;
+}
+
+message Response {
+    string id = 1;
+    string message = 2;
+    string reciept = 3;
+    bool created = 4;
+    Item item = 5;
+}
+
